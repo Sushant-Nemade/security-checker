@@ -1,0 +1,13 @@
+{
+  "name": "security-checker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "security-checker": "./dist/cli.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/*.test.js",
+    "scan": "node dist/cli.js"
+  },
+  "devDependencies": { "@types/node": "^24.0.0", "typescript": "^5.9.0" }
+}

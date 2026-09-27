@@ -1,0 +1,7 @@
+[
+  { "id": "openai-api-key", "name": "OpenAI API key", "pattern": "sk-(?:proj-)?[A-Za-z0-9_-]{20,}", "severity": "error", "remediation": "Revoke the key in OpenAI, issue a replacement, and remove it from Git history." },
+  { "id": "github-token", "name": "GitHub token", "pattern": "(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})", "severity": "error", "remediation": "Revoke the token in GitHub, issue a scoped replacement, and remove it from Git history." },
+  { "id": "aws-access-key", "name": "AWS access key ID", "pattern": "(?:AKIA|ASIA)[A-Z0-9]{16}", "severity": "error", "remediation": "Deactivate the access key in AWS IAM, investigate usage, and rotate related credentials." },
+  { "id": "stripe-secret", "name": "Stripe secret key", "pattern": "sk_(?:live|test)_[A-Za-z0-9]{20,}", "severity": "error", "remediation": "Roll the key in Stripe and remove it from the repository history." },
+  { "id": "private-key", "name": "Private key header", "pattern": "-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----", "severity": "error", "remediation": "Rotate the corresponding key pair and remove the private key from Git history." }
+]
